@@ -1,0 +1,8 @@
+node{
+    stage("Clone the project"){
+        git branch: 'master' ,url:"https://github.com/AparnaJoshi555/Jenkins-EY.git"
+    }
+    stage("Compilation"){
+        bat "./mvnw clean install -DskipTests"
+    }
+}
